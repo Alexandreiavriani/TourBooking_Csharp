@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2A0541E-6B88-4D2E-92AF-76314854903F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Alexandre_Iavriani_Project</RootNamespace>
+    <AssemblyName>Alexandre_Iavriani_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Airline.cs">
+      <DependentUpon>FinaluriModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineCrud\AirlineCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AirlineCrud\AirlineCreate.Designer.cs">
+      <DependentUpon>AirlineCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineCrud\AirlineDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AirlineCrud\AirlineDelete.Designer.cs">
+      <DependentUpon>AirlineDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineCrud\AirlineShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AirlineCrud\AirlineShow.Designer.cs">
+      <DependentUpon>AirlineShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineCrud\AirlineUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AirlineCrud\AirlineUpdate.Designer.cs">
+      <DependentUpon>AirlineUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>FinaluriModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryCrud\CountryCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountryCrud\CountryCreate.Designer.cs">
+      <DependentUpon>CountryCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountryCrud\CountryDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountryCrud\CountryDelete.Designer.cs">
+      <DependentUpon>CountryDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountryCrud\CountryShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountryCrud\CountryShow.Designer.cs">
+      <DependentUpon>CountryShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountryCrud\CountryUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountryCrud\CountryUpdate.Designer.cs">
+      <DependentUpon>CountryUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create_Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Reservation.Designer.cs">
+      <DependentUpon>Create_Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinaluriModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinaluriModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinaluriModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinaluriModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinaluriModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinaluriModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs">
+      <DependentUpon>FinaluriModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerCrud\ManagerCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerCrud\ManagerCreate.Designer.cs">
+      <DependentUpon>ManagerCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerCrud\ManagerDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerCrud\ManagerDelete.Designer.cs">
+      <DependentUpon>ManagerDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerCrud\ManagerShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerCrud\ManagerShow.Designer.cs">
+      <DependentUpon>ManagerShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerCrud\ManagerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerCrud\ManagerUpdate.Designer.cs">
+      <DependentUpon>ManagerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservation.cs">
+      <DependentUpon>FinaluriModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>FinaluriModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDelete.Designer.cs">
+      <DependentUpon>UserDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>FinaluriModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirlineCrud\AirlineCreate.resx">
+      <DependentUpon>AirlineCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirlineCrud\AirlineDelete.resx">
+      <DependentUpon>AirlineDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirlineCrud\AirlineShow.resx">
+      <DependentUpon>AirlineShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirlineCrud\AirlineUpdate.resx">
+      <DependentUpon>AirlineUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountryCrud\CountryCreate.resx">
+      <DependentUpon>CountryCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountryCrud\CountryDelete.resx">
+      <DependentUpon>CountryDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountryCrud\CountryShow.resx">
+      <DependentUpon>CountryShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountryCrud\CountryUpdate.resx">
+      <DependentUpon>CountryUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_Reservation.resx">
+      <DependentUpon>Create_Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerCrud\ManagerCreate.resx">
+      <DependentUpon>ManagerCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerCrud\ManagerDelete.resx">
+      <DependentUpon>ManagerDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerCrud\ManagerShow.resx">
+      <DependentUpon>ManagerShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerCrud\ManagerUpdate.resx">
+      <DependentUpon>ManagerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserDelete.resx">
+      <DependentUpon>UserDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="FinaluriModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FinaluriModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="FinaluriModel.edmx.diagram">
+      <DependentUpon>FinaluriModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tours_Icon.png" />
+    <None Include="Resources\Tours_Icon1.png" />
+    <None Include="Resources\toursIcon.png" />
+    <None Include="Resources\ToursIcon2.png" />
+    <None Include="Resources\ToursIcon3.png" />
+    <None Include="Resources\ToursIcon4.png" />
+    <None Include="Resources\20-204920_free-icons-png-travel-icon-png-blue.png" />
+    <None Include="Resources\fly.png" />
+    <None Include="Resources\flticon.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\lock1.png" />
+    <None Include="Resources\reservation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FinaluriModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FinaluriModel.edmx</DependentUpon>
+      <LastGenOutput>FinaluriModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="FinaluriModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FinaluriModel.edmx</DependentUpon>
+      <LastGenOutput>FinaluriModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
